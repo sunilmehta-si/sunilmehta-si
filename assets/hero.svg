@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="380" viewBox="0 0 1280 380" role="img" aria-labelledby="title desc">
+<title id="title">Sunil Mehta — Lead DevOps, MLOps and Platform Engineer</title>
+<desc id="desc">The infrastructure behind AI platforms. Kubernetes, GitOps, confidential compute, and multi-cloud delivery.</desc>
+<rect width="1280" height="380" rx="14" fill="#101311"/>
+<rect x="1" y="1" width="1278" height="378" rx="13" fill="none" stroke="#35412c"/>
+<path d="M68 67H1212M68 309H1212" stroke="#35412c"/>
+<g font-family="-apple-system,Segoe UI,Arial,sans-serif">
+<text x="68" y="48" fill="#b7c2ad" font-size="14" letter-spacing="3">LEAD DEVOPS, MLOPS &amp; PLATFORM</text>
+<text x="68" y="164" fill="#f2f4eb" font-size="76" font-weight="650" letter-spacing="-3">Sunil Mehta<tspan fill="#ccf478">.</tspan></text>
+<text x="70" y="220" fill="#ccf478" font-size="29" letter-spacing="-.5">The infrastructure behind AI platforms.</text>
+<text x="70" y="262" fill="#a5b09a" font-size="20">Kubernetes · GitOps · Confidential compute</text>
+<text x="70" y="347" fill="#b7c2ad" font-size="15">FOUNDING LEAD DEVOPS @ ORGN</text>
+<text x="1210" y="347" text-anchor="end" fill="#ccf478" font-size="15">CONNECT ON X ↗</text>
+</g>
+<g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="16">
+<path d="M970 121V251" stroke="#718b55"/>
+<rect x="843" y="106" width="289" height="46" rx="3" fill="#1a2117" stroke="#3c4932"/><text x="865" y="135" fill="#c6d9b6">01 / GITOPS</text>
+<rect x="843" y="173" width="289" height="46" rx="3" fill="#1a2117" stroke="#3c4932"/><text x="865" y="202" fill="#c6d9b6">02 / AI INFRASTRUCTURE</text>
+<rect x="843" y="240" width="289" height="46" rx="3" fill="#26341b" stroke="#718b55"/><text x="865" y="269" fill="#dcf8b4">03 / CONFIDENTIAL COMPUTE</text>
+</g></svg>

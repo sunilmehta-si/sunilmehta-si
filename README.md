@@ -3,6 +3,8 @@
 </a>
 
 <p align="center">
+  <a href="https://sunilmehta.si"><strong>sunilmehta.si ↗</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/sunilmehta695/"><strong>LinkedIn ↗</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://orgn.com">Building at ORGN</a>
@@ -45,4 +47,4 @@ My scope runs from `terraform plan` to production traffic: **Kubernetes and GitO
 ---
 
 **Building AI platforms, developer tools, or secure infrastructure?**<br/>
-[Connect on LinkedIn](https://www.linkedin.com/in/sunilmehta695/) · [Connect on X](https://x.com/Sunilmehta_695) · [Email me](mailto:sunilmehta695@gmail.com)
+[sunilmehta.si](https://sunilmehta.si) · [Connect on LinkedIn](https://www.linkedin.com/in/sunilmehta695/) · [Connect on X](https://x.com/Sunilmehta_695) · [Email me](mailto:sunilmehta695@gmail.com)

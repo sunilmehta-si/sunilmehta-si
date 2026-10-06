@@ -30,6 +30,12 @@ My scope runs from `terraform plan` to production traffic: **Kubernetes and GitO
 
 *These highlights describe my professional experience. Most of the underlying work lives in private organization repositories.*
 
+### Public engineering projects
+
+**[LLM Inference Platform](https://github.com/sunilmehta-si/llm-inference-platform)** — GPU-backed LLM serving on Apple Silicon with vLLM-Metal, a Python streaming gateway, Prometheus/Grafana monitoring, reproducible benchmarks, and Kubernetes deployment templates.
+
+Explore the [architecture](https://github.com/sunilmehta-si/llm-inference-platform/blob/main/docs/architecture.md), [operational tests](https://github.com/sunilmehta-si/llm-inference-platform/tree/main/tests), and [benchmark evidence](https://github.com/sunilmehta-si/llm-inference-platform/tree/main/benchmarks).
+
 ### Tools I work with
 
 **Infrastructure** &nbsp; Kubernetes · Terraform · Argo CD · Helm · GCP · AWS · DigitalOcean · Cloudflare<br/>

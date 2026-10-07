@@ -1,4 +1,4 @@
-<a href="https://x.com/Sunilmehta_695">
+<a href="https://x.com/sunilmehta_si">
   <img src="assets/hero.svg" width="100%" alt="Sunil Mehta — Lead DevOps, MLOps and Platform Engineer. The infrastructure behind AI platforms." />
 </a>
 
@@ -9,7 +9,7 @@
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://orgn.com">Building at ORGN</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://x.com/Sunilmehta_695"><strong>Connect on X</strong></a>
+  <a href="https://x.com/sunilmehta_si"><strong>Connect on X</strong></a>
 </p>
 
 ## I build the infrastructure AI products run on.
@@ -61,4 +61,4 @@ Explore the [architecture](https://github.com/sunilmehta-si/llm-inference-platfo
 ---
 
 **Building AI platforms, developer tools, or secure infrastructure?**<br/>
-[sunilmehta.si](https://sunilmehta.si) · [Connect on LinkedIn](https://www.linkedin.com/in/sunilmehta695/) · [Connect on X](https://x.com/Sunilmehta_695) · [Email me](mailto:sunilmehta695@gmail.com)
+[sunilmehta.si](https://sunilmehta.si) · [Connect on LinkedIn](https://www.linkedin.com/in/sunilmehta695/) · [Connect on X](https://x.com/sunilmehta_si) · [Email me](mailto:sunilmehta695@gmail.com)

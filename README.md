@@ -32,6 +32,14 @@ My scope runs from `terraform plan` to production traffic: **Kubernetes and GitO
 
 ### Public engineering projects
 
+**[AI DevSecOps CI/CD](https://github.com/sunilmehta-si/ai-devsecops-cicd)** — A reference pipeline for shipping LLM and AI-agent services safely: prompt-injection tests mapped to the OWASP LLM Top 10, SBOM and AI-BOM generation, Trivy and secret scanning, keyless cosign signing with attestations, and Kyverno admission policies with an offline validator mirroring them in CI.
+
+Explore the [threat model](https://github.com/sunilmehta-si/ai-devsecops-cicd/blob/main/docs/threat-model.md), [AI security test corpus](https://github.com/sunilmehta-si/ai-devsecops-cicd/tree/main/tests/ai_security), and [workflows](https://github.com/sunilmehta-si/ai-devsecops-cicd/tree/main/.github/workflows).
+
+**[Jev Inference Router](https://github.com/sunilmehta-si/jev-inference-router)** — An observable decision layer for local GPU inference: TypeSafe Jev chooses the handler, Python applies the policy, and local Qwen generates the answer, with visible probabilities, retrieval, Prometheus metrics, and reproducible evaluations against rule-based and classifier baselines.
+
+Explore the [architecture](https://github.com/sunilmehta-si/jev-inference-router/blob/main/docs/architecture.md), [evaluations](https://github.com/sunilmehta-si/jev-inference-router/tree/main/evaluations), and [operations guide](https://github.com/sunilmehta-si/jev-inference-router/blob/main/docs/operations.md).
+
 **[LLM Inference Platform](https://github.com/sunilmehta-si/llm-inference-platform)** — GPU-backed LLM serving on Apple Silicon with vLLM-Metal, a Python streaming gateway, Prometheus/Grafana monitoring, reproducible benchmarks, and Kubernetes deployment templates.
 
 Explore the [architecture](https://github.com/sunilmehta-si/llm-inference-platform/blob/main/docs/architecture.md), [operational tests](https://github.com/sunilmehta-si/llm-inference-platform/tree/main/tests), and [benchmark evidence](https://github.com/sunilmehta-si/llm-inference-platform/tree/main/benchmarks).

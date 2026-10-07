@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://sunilmehta.si"><strong>sunilmehta.si ↗</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/sunilmehta695/"><strong>LinkedIn ↗</strong></a>
+  <a href="https://www.linkedin.com/in/sunilmehta-si/"><strong>LinkedIn ↗</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://orgn.com">Building at ORGN</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
@@ -61,4 +61,4 @@ Explore the [architecture](https://github.com/sunilmehta-si/llm-inference-platfo
 ---
 
 **Building AI platforms, developer tools, or secure infrastructure?**<br/>
-[sunilmehta.si](https://sunilmehta.si) · [Connect on LinkedIn](https://www.linkedin.com/in/sunilmehta695/) · [Connect on X](https://x.com/sunilmehta_si) · [Email me](mailto:sunilmehta695@gmail.com)
+[sunilmehta.si](https://sunilmehta.si) · [Connect on LinkedIn](https://www.linkedin.com/in/sunilmehta-si/) · [Connect on X](https://x.com/sunilmehta_si) · [Email me](mailto:sunilmehta695@gmail.com)

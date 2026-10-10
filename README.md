@@ -32,6 +32,10 @@ My scope runs from `terraform plan` to production traffic: **Kubernetes and GitO
 
 ### Public engineering projects
 
+**[Agentic Code Review Tool](https://github.com/sunilmehta-si/agentic-code-review-tool)** — Scanner-grounded AI review for the whole pull request: 58 rules across app code, Kubernetes, Docker, Terraform, GitHub Actions and AI/agent code (OWASP LLM Top 10, MCP configs, agent skills), only on changed lines, with an optional Claude or local-LLM agent that verifies findings using read-only, repository-confined tools.
+
+Explore the [rule catalogue](https://github.com/sunilmehta-si/agentic-code-review-tool#built-in-rules), [GitHub Action](https://github.com/sunilmehta-si/agentic-code-review-tool#use-it-in-github-actions), and [threat model](https://github.com/sunilmehta-si/agentic-code-review-tool/blob/main/SECURITY.md).
+
 **[AI DevSecOps CI/CD](https://github.com/sunilmehta-si/ai-devsecops-cicd)** — A reference pipeline for shipping LLM and AI-agent services safely: prompt-injection tests mapped to the OWASP LLM Top 10, SBOM and AI-BOM generation, Trivy and secret scanning, keyless cosign signing with attestations, and Kyverno admission policies with an offline validator mirroring them in CI.
 
 Explore the [threat model](https://github.com/sunilmehta-si/ai-devsecops-cicd/blob/main/docs/threat-model.md), [AI security test corpus](https://github.com/sunilmehta-si/ai-devsecops-cicd/tree/main/tests/ai_security), and [workflows](https://github.com/sunilmehta-si/ai-devsecops-cicd/tree/main/.github/workflows).

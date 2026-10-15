@@ -32,9 +32,13 @@ My scope runs from `terraform plan` to production traffic: **Kubernetes and GitO
 
 ### Public engineering projects
 
-**[Agentic Code Review Tool](https://github.com/sunilmehta-si/agentic-code-review-tool)** — Scanner-grounded AI review for the whole pull request: 58 rules across app code, Kubernetes, Docker, Terraform, GitHub Actions and AI/agent code (OWASP LLM Top 10, MCP configs, agent skills), only on changed lines, with an optional Claude or local-LLM agent that verifies findings using read-only, repository-confined tools.
+**[Kubernetes GPU Scheduler Benchmark](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark)** — Which GPU scheduler should a platform run? Replays the same AI workload (training gangs, fine-tunes, inference, notebooks) through the default kube-scheduler, Kueue, Volcano and KAI Scheduler, first in a reference simulation and then on real schedulers in CI (kind + kwok GPU nodes), and measures utilisation, fragmentation, queue wait, fairness and cost. Finding: bin-packing, not gang scheduling, makes most of the difference, about 19% cheaper per useful GPU-hour over ten traces.
 
-Explore the [rule catalogue](https://github.com/sunilmehta-si/agentic-code-review-tool#built-in-rules), [GitHub Action](https://github.com/sunilmehta-si/agentic-code-review-tool#use-it-in-github-actions), and [threat model](https://github.com/sunilmehta-si/agentic-code-review-tool/blob/main/SECURITY.md).
+Explore the [results](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark#results), [real-scheduler checks](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark/blob/main/results/cluster/README.md), and [methodology](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark/blob/main/docs/methodology.md).
+
+**[Agentic Code Review Tool](https://github.com/sunilmehta-si/agentic-code-review-tool)** — Scanner-grounded AI review for the whole pull request: 103 rules across app code, Kubernetes, Docker and Compose, Terraform, GitHub Actions and AI/agent code (OWASP LLM Top 10, MCP configs, agent skills, coding-agent settings), only on changed lines, with an optional Claude or local-LLM agent that verifies findings using read-only, repository-confined tools. Reports to GitHub, GitLab, SARIF and JUnit.
+
+See a [live AI review on a pull request](https://github.com/sunilmehta-si/agentic-code-review-tool/pull/1), the [rule catalogue](https://github.com/sunilmehta-si/agentic-code-review-tool#built-in-rules), and the [threat model](https://github.com/sunilmehta-si/agentic-code-review-tool/blob/main/SECURITY.md).
 
 **[AI DevSecOps CI/CD](https://github.com/sunilmehta-si/ai-devsecops-cicd)** — A reference pipeline for shipping LLM and AI-agent services safely: prompt-injection tests mapped to the OWASP LLM Top 10, SBOM and AI-BOM generation, Trivy and secret scanning, keyless cosign signing with attestations, and Kyverno admission policies with an offline validator mirroring them in CI.
 
@@ -52,6 +56,7 @@ Explore the [architecture](https://github.com/sunilmehta-si/llm-inference-platfo
 
 **Infrastructure** &nbsp; Kubernetes · Terraform · Argo CD · Helm · GCP · AWS · DigitalOcean · Cloudflare<br/>
 **Systems & services** &nbsp; Go · Rust · TypeScript · Python · PostgreSQL · Redis<br/>
+**GPU scheduling** &nbsp; Kueue · Volcano · KAI Scheduler · kwok<br/>
 **Security** &nbsp; Intel TDX · OAuth 2.1 / OIDC · Kyverno · OPA<br/>
 **Observability** &nbsp; Prometheus · Grafana · Loki · Tempo · OpenTelemetry · ClickHouse
 

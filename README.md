@@ -32,6 +32,10 @@ My scope runs from `terraform plan` to production traffic: **Kubernetes and GitO
 
 ### Public engineering projects
 
+**[Kubernetes Secure MLOps Pipeline](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline)** — An MLOps pipeline on Kubernetes where every model that reaches production is reproducible, evaluated against the model it replaces, signed and verified at deploy time. Kubeflow Pipelines and MLflow train and gate; models ship as signed KServe images with SLSA provenance and an ML-BOM, and Kyverno refuses anything else at admission. One Helm chart is delivered to dev, staging and prod by Argo CD; live drift and accuracy alerts start retraining; a load drill holds the serving objectives. A real kind cluster runs 24 admission, network, monitoring, feedback, load and GitOps checks in CI on every push.
+
+Explore the [governance and threat model](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline/blob/main/docs/governance-and-security.md), [serving and its drills](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline/blob/main/docs/serving.md), and [environments and GitOps](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline/blob/main/docs/environments.md).
+
 **[Kubernetes GPU Scheduler Benchmark](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark)** — Which GPU scheduler should a platform run? Replays the same AI workload (training gangs, fine-tunes, inference, notebooks) through the default kube-scheduler, Kueue, Volcano and KAI Scheduler, first in a reference simulation and then on real schedulers in CI (kind + kwok GPU nodes), and measures utilisation, fragmentation, queue wait, fairness and cost. Finding: bin-packing, not gang scheduling, makes most of the difference, about 19% cheaper per useful GPU-hour over ten traces.
 
 Explore the [results](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark#results), [real-scheduler checks](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark/blob/main/results/cluster/README.md), and [methodology](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark/blob/main/docs/methodology.md).

@@ -70,9 +70,10 @@ Explore the [architecture](https://github.com/sunilmehta-si/llm-inference-platfo
 ### Tools I work with
 
 **Infrastructure** &nbsp; Kubernetes · Terraform · Argo CD · Helm · GCP · AWS · DigitalOcean · Cloudflare<br/>
+**MLOps & serving** &nbsp; Kubeflow Pipelines · MLflow · KServe · vLLM<br/>
 **Systems & services** &nbsp; Go · Rust · TypeScript · Python · PostgreSQL · Redis<br/>
 **GPU scheduling** &nbsp; Kueue · Volcano · KAI Scheduler · kwok<br/>
-**Security** &nbsp; Intel TDX · OAuth 2.1 / OIDC · Kyverno · OPA<br/>
+**Security** &nbsp; Intel TDX · OAuth 2.1 / OIDC · Kyverno · OPA · cosign · SLSA · OpenSSF model signing<br/>
 **Observability** &nbsp; Prometheus · Grafana · Loki · Tempo · OpenTelemetry · ClickHouse
 
 ### How I work

@@ -56,6 +56,17 @@ Explore the [architecture](https://github.com/sunilmehta-si/jev-inference-router
 
 Explore the [architecture](https://github.com/sunilmehta-si/llm-inference-platform/blob/main/docs/architecture.md), [operational tests](https://github.com/sunilmehta-si/llm-inference-platform/tree/main/tests), and [benchmark evidence](https://github.com/sunilmehta-si/llm-inference-platform/tree/main/benchmarks).
 
+### Upstream contributions
+
+| Project | Contribution | Status |
+| :--- | :--- | :--- |
+| [Argo CD](https://github.com/argoproj/argo-cd/pull/30374) | Documented OCI repositories over plain HTTP (`insecureOCIForceHttp`, `type: oci` secrets) | Merged |
+| [KServe](https://github.com/kserve/kserve/pull/6472) | Security: every Python lock moved off the certifi that still trusted the compromised emSign roots | In review |
+| [xAI Python SDK](https://github.com/xai-org/xai-sdk-python/pull/241) | Shipped the missing `py.typed` marker so type checkers use the SDK's annotations | In review |
+| [Tesla vehicle-command](https://github.com/teslamotors/vehicle-command/pull/529) | Fixed key storage rejecting valid P-256 keys whose scalar starts with a zero byte | In review |
+| [X API CLI (xurl)](https://github.com/xdevplatform/xurl/pull/108) | Webhook server fails fast without an ngrok token instead of hanging | In review |
+| [Kubeflow Pipelines](https://github.com/kubeflow/pipelines/issues/15056) · [MLflow](https://github.com/mlflow/mlflow/issues/27051) | A compiler bug with a fix ready; model downloads that break signature verification | Reported |
+
 ### Tools I work with
 
 **Infrastructure** &nbsp; Kubernetes · Terraform · Argo CD · Helm · GCP · AWS · DigitalOcean · Cloudflare<br/>

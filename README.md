@@ -69,8 +69,9 @@ Explore the [architecture](https://github.com/sunilmehta-si/llm-inference-platfo
 | [xAI Python SDK](https://github.com/xai-org/xai-sdk-python/pull/241) | Shipped the missing `py.typed` marker so type checkers use the SDK's annotations | In review |
 | [Tesla vehicle-command](https://github.com/teslamotors/vehicle-command/pull/529) | Fixed key storage rejecting valid P-256 keys whose scalar starts with a zero byte, revised in review to Go 1.25's key encoding, which avoids a timing side channel | In review |
 | [X API CLI (xurl)](https://github.com/xdevplatform/xurl/pull/108) | Webhook server fails fast without an ngrok token instead of hanging | In review |
-| [MLflow](https://github.com/mlflow/mlflow/pull/27173) | Stopped writing a metadata file into every downloaded `models:/` artifact, which broke signature checks; the approach agreed with the maintainers in [#27051](https://github.com/mlflow/mlflow/issues/27051), as a breaking change | In review |
-| [KAI Scheduler](https://github.com/kai-scheduler/KAI-Scheduler/pull/2498) | Docs: the gpu-fractioning names for the subchart and operator | Approved |
+| [MLflow](https://github.com/mlflow/mlflow/pull/27173) | Stopped writing a metadata file into every downloaded `models:/` artifact, which broke signature checks; the approach agreed with the maintainers in [#27051](https://github.com/mlflow/mlflow/issues/27051), as a breaking change | Merged |
+| [KAI Scheduler](https://github.com/kai-scheduler/KAI-Scheduler/pull/2498) | Docs: the gpu-fractioning names for the subchart and operator | Merged |
+| [etcd-operator](https://github.com/etcd-io/etcd-operator/pull/544) | The operator no longer carries on without its TLS certificates when provisioning fails; the error now requeues the reconcile | In review |
 | [KServe website](https://github.com/kserve/website/pull/766) | Docs: create the `kserve` namespace before applying `kserve.yaml` | In review |
 | [Kubeflow Pipelines](https://github.com/kubeflow/pipelines/issues/15056) | A compiler bug with a fix ready | Reported |
 

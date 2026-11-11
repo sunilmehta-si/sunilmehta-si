@@ -1,101 +1,92 @@
-<a href="https://x.com/sunilmehta_si">
-  <img src="assets/hero.svg" width="100%" alt="Sunil Mehta — Lead DevOps, MLOps and Platform Engineer. The infrastructure behind AI platforms." />
+<a href="https://sunilmehta.si">
+  <img src="assets/banner.png" width="100%" alt="Sunil Mehta. I build and scale the infrastructure AI platforms run on. 300+ TDX GPU nodes, 100M+ LLM requests a month, 99.95% uptime, 55% lower cloud cost." />
 </a>
 
 <p align="center">
-  <a href="https://sunilmehta.si"><strong>sunilmehta.si ↗</strong></a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/sunilmehta-si/"><strong>LinkedIn ↗</strong></a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://orgn.com">Building at ORGN</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://x.com/sunilmehta_si"><strong>Connect on X</strong></a>
+  <a href="https://sunilmehta.si"><strong>sunilmehta.si</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://sunilmehta.si/#projects">Projects</a>
+  &nbsp;·&nbsp;
+  <a href="https://sunilmehta.si/#experience">Experience</a>
+  &nbsp;·&nbsp;
+  <a href="https://sunilmehta.si/Sunil_Mehta_Resume.pdf">Resume</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/sunilmehta-si/">LinkedIn</a>
+  &nbsp;·&nbsp;
+  <a href="https://x.com/sunilmehta_si">X</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:sunilmehta695@gmail.com">Email</a>
 </p>
 
-## I build the infrastructure AI products run on.
+I'm **Sunil Mehta**, Founding Lead DevOps & MLOps Engineer at **[ORGN](https://orgn.com)**, based in Gurugram and open to remote roles. For 9+ years I have built and run the platforms AI products depend on, from multi-cloud Kubernetes and confidential GPU compute to secure delivery and cost governance.
 
-I'm **Sunil Mehta**, a lead DevOps, MLOps and platform engineer and founding lead at **[ORGN](https://orgn.com)**. I work across cloud infrastructure, confidential computing, identity, and the systems that turn AI capabilities into dependable products.
+In the open I build benchmarks that answer questions a platform team has to answer, and I send the fixes I find upstream.
 
-My scope runs from `terraform plan` to production traffic: **Kubernetes and GitOps, confidential compute, and secure delivery pipelines**.
+## Measured in the open
 
-### Selected engineering work
+| Project | What it asks | What held |
+| :--- | :--- | :--- |
+| **[k8s-gpu-scheduler-benchmark](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark)**<br/>`v0.5.0` | Which Kubernetes GPU scheduler should a platform run? | Out of the box only KAI bin-packs GPU pods by their GPUs. One setting made Volcano **26% faster and 26% cheaper** per useful GPU-hour on the same trace. |
+| **[k8s-inference-routing-benchmark](https://github.com/sunilmehta-si/k8s-inference-routing-benchmark)**<br/>`v0.6.0` | How much does the router in front of LLM servers matter? | Prefix-aware routing lifts cache hits from **64% to 80%** and cuts median time to first token by 27%. Under load the router matters more and the routers differ less. |
+| **[k8s-inference-autoscaling-benchmark](https://github.com/sunilmehta-si/k8s-inference-autoscaling-benchmark)**<br/>`v0.8.0` | What should an autoscaler follow when it scales LLM inference? | On a real cluster **no ramp from 30 seconds to 10 minutes** was slow enough for the default HPA to keep requests on time. Pod startup is the constraint, a small warm pool is the cheapest fix, and a forecast helps on slow ramps only. |
+| **[kubernetes-secure-mlops-pipeline](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline)**<br/>`v0.8.0` | Can every model in production be reproducible, signed and verified? | A real kind cluster runs **24 checks** on every push, and the gate blocked a 0.909 challenger against the 0.938 champion. |
+| **[agentic-code-review-tool](https://github.com/sunilmehta-si/agentic-code-review-tool)**<br/>`v0.11.1` | Scanner-grounded AI review for the whole pull request. | 128 rules, each swept over real repositories before release. One rule went from **1,556 findings to 101**. |
 
-| Area | What I've built and operated |
-| :--- | :--- |
-| **Confidential computing** | Hardware-isolated Kubernetes sandboxes on Intel TDX, with remote attestation and network policy. |
-| **AI infrastructure** | An LLM gateway across providers, with metering, spend controls, and GitOps delivery. |
-| **Cloud platforms** | Multi-cloud Kubernetes across GKE and DigitalOcean; Terraform across GCP and AWS; Argo CD reconciliation and keyless CI/CD. |
-| **Identity & security** | An OAuth 2.1 / OIDC authorization server, and a zero-downtime migration onto GKE and Cloud SQL. |
-| **Reliability & cost** | Prometheus, Grafana, OpenTelemetry, and ClickHouse; infrastructure cost reductions through right-sizing, consolidation, and scale-to-zero policies. |
+Also: **[ai-devsecops-cicd](https://github.com/sunilmehta-si/ai-devsecops-cicd)**, a secure delivery path for LLM and agent services · **[llm-inference-platform](https://github.com/sunilmehta-si/llm-inference-platform)**, LLM serving on Apple Silicon you can measure · **[jev-inference-router](https://github.com/sunilmehta-si/jev-inference-router)**, an observable routing layer for local inference.
 
-*These highlights describe my professional experience. Most of the underlying work lives in private organization repositories.*
+### How the numbers are held
 
-### Public engineering projects
+1. **One workload, every contender.** The same trace is replayed through each scheduler, router or policy, so a difference belongs to the component and not to the traffic.
+2. **Real components, in CI.** Kueue, Volcano, KAI, the llm-d router, the HPA and KEDA run as released, on kind clusters in GitHub Actions. Anyone can run them again.
+3. **Every number has a test.** The datasets are committed, and tests hold each figure a README quotes to the data behind it.
+4. **Only what repeats is claimed.** A difference on a cluster counts when it holds over more than one run. One early reading reversed on the second run and was withdrawn in the open.
 
-**[Kubernetes Secure MLOps Pipeline](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline)** — An MLOps pipeline on Kubernetes where every model that reaches production is reproducible, evaluated against the model it replaces, signed and verified at deploy time. Kubeflow Pipelines and MLflow train and gate; models ship as signed KServe images with SLSA provenance and an ML-BOM, and Kyverno refuses anything else at admission. One Helm chart is delivered to dev, staging and prod by Argo CD; live drift and accuracy alerts start retraining; a load drill holds the serving objectives. A real kind cluster runs 24 admission, network, monitoring, feedback, load and GitOps checks in CI on every push, and every pin (images by digest, binaries by checksum, Dependabot bumps) waits 14 days after its release and is compared with upstream on each run.
+## Shipped lately
 
-Explore the [governance and threat model](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline/blob/main/docs/governance-and-security.md), [serving and its drills](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline/blob/main/docs/serving.md), [environments and GitOps](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline/blob/main/docs/environments.md), and [the release](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline/releases/tag/v0.8.0).
+| When | What | |
+| :--- | :--- | :--- |
+| 11 Nov 2026 | **k8s-inference-autoscaling-benchmark** `v0.8.0` | [A predictive policy](https://github.com/sunilmehta-si/k8s-inference-autoscaling-benchmark/releases/tag/v0.8.0): scaling one pod startup ahead helps on slow ramps, and warm capacity still wins the fast ones. |
+| 09 Nov 2026 | **kubernetes-secure-mlops-pipeline** `v0.8.0` | [Every pin is held back](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline/releases/tag/v0.8.0) until its release is 14 days old, and reported when it drifts. |
+| 04 Nov 2026 | **agentic-code-review-tool** `v0.11.1` | [A false positive](https://github.com/sunilmehta-si/agentic-code-review-tool/releases/tag/v0.11.1) found by sweeping Inspect AI: 1,124 findings from one rule, down to 8. |
+| 02 Nov 2026 | **k8s-inference-routing-benchmark** `v0.6.0` | [120 cluster runs under load](https://github.com/sunilmehta-si/k8s-inference-routing-benchmark/releases/tag/v0.6.0): the busier the pods, the more the router matters and the less the routers differ. |
+| 28 Oct 2026 | **MLflow**, merged upstream | [Model downloads no longer modify signed model directories](https://github.com/mlflow/mlflow/pull/27173), so signature verification holds. |
 
-**[Kubernetes GPU Scheduler Benchmark](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark)** — Which GPU scheduler should a platform run? Replays the same AI workload (training gangs, fine-tunes, inference, notebooks) through the default kube-scheduler, Kueue, Volcano and KAI Scheduler, first in a reference simulation and then on real schedulers in CI (kind + kwok GPU nodes), and measures utilisation, fragmentation, queue wait, fairness and cost, up to a 1,024-GPU fleet. Finding: out of the box only KAI bin-packs GPU pods by their GPUs; one setting fixes each of the others, and on the real Volcano scheduler it made the same trace 26% faster and 26% cheaper per useful GPU-hour. Every cluster version is pinned in one file, and a report says what upstream has released since and when it is old enough to adopt.
+## The platform I run at ORGN
 
-Explore the [results](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark#results), [real-scheduler checks](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark/blob/main/results/cluster/README.md), and [methodology](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark/blob/main/docs/methodology.md).
+| Ship | Guard | Run | Watch & own |
+| :--- | :--- | :--- | :--- |
+| GitHub Actions, keyless through Workload Identity Federation | Secret, code, dependency, image and infrastructure-code scanning | 10+ GKE clusters for an engineering org of 50+ | 99.95% uptime across 200+ services |
+| Artifact Registry, images signed with cosign | Kyverno and OPA at admission | 300+ Intel TDX confidential GPU nodes | Istio, Prometheus, Loki, OpenTelemetry, Grafana HA |
+| Argo CD to every cluster | Falco at runtime | Rust LLM gateways, 100M+ requests a month | $70K–$90K of monthly cloud spend owned |
+| Protected Terraform workflows | | OAuth 2.1 / OIDC sign-on, migrated with zero downtime | Infrastructure cost cut by 55% |
 
-**[Kubernetes Inference Routing Benchmark](https://github.com/sunilmehta-si/k8s-inference-routing-benchmark)** — How much does the router in front of LLM servers matter? Replays the same chat and RAG traffic through a Kubernetes Service and the llm-d Router (the Gateway API Inference Extension's endpoint picker) with load, prefix-cache and combined scoring, on kind clusters with simulated vLLM pods. Every router runs eight times, and only differences that held in every run are claimed. Finding: prefix-aware routing lifts the pods' cache hits from 64% to 80% and cuts median time to first token by 27%, but sends most requests to two of four pods, so load-aware routing keeps the best tail. Tuning the load scorer's weight or threshold did not spread the work; swapping in the router's active-request scorer did, beating prefix-plus-load on median, p95 and p99 time to first token in all eight runs, and with the prefix at weight 2 it keeps 83% cache hits with the best p95 of any router measured; on eight pods the prefix routers' pile-up doubles while it stays even, and on a control trace with nothing to cache it keeps its whole latency advantage, which shows the gain is the load scoring. Reading the pods' real cache contents from their KV-cache events, instead of the picker's estimate, finds two to three more points of cache hits in every run and a better tail, for a tokenizer round trip at the median; six more datasets place that: the gain needs a load scorer strong enough to move prompts off the pod that holds them, on eight pods the real picture spreads the best approximate router's pile-up, the median cost is the extra hop rather than tokenizer CPU and vanishes behind long prompts, and speculative indexing helps on four pods and hurts on eight. Under load the router matters more and the routers differ less: at three times the trace's rate a plain Service's median is 3.6x the best router's and a tenth of its requests miss the objective, at four times it passes a second while every router stays under 170 ms, and past that point only having a router at all holds. The scorers' own formulas, read from the router's source, explain each result, and a test checks every claim against the runs.
+*This describes my professional work. Most of it lives in private organization repositories. The [full experience](https://sunilmehta.si/#experience), five roles since 2017, is on the site.*
 
-Explore the [results](https://github.com/sunilmehta-si/k8s-inference-routing-benchmark#results), [methodology](https://github.com/sunilmehta-si/k8s-inference-routing-benchmark/blob/main/docs/methodology.md), and the [releases](https://github.com/sunilmehta-si/k8s-inference-routing-benchmark/releases).
-
-**[Kubernetes Inference Autoscaling Benchmark](https://github.com/sunilmehta-si/k8s-inference-autoscaling-benchmark)** — What should an autoscaler follow when it scales LLM inference, and can it hold a latency objective at all? Replays the same bursty chat trace through a model of a vLLM deployment scaled by the Kubernetes HorizontalPodAutoscaler's own algorithm on four signals (slot utilization, requests in the system, queue depth, request rate), eight runs per policy, with only differences that held in every run claimed. Finding: no default autoscaler holds a 2 second first-token objective on a ramp from 3 to 20 requests per second in 30 seconds; the best signal serves 80.3% of requests in time at 74% of the cost of a static pool sized for the peak. The miss is pod startup first and the delay in deciding second, not the target or the scale-up limit: pods that start in one second with a decision every second serve every request at 62% of the static pool's cost, and keeping at least 12 pods lifts the default to 93.5% for about 3% more. A simulation with the controller modelled step by step, seven datasets, and a test that checks every number in the README against the saved results. The model is then checked against the real HPA, Prometheus and prometheus-adapter on a kind cluster (twelve 30-minute runs): medians and scaling decisions agree, the tail does not, and giving each pod its own queue, as behind a Service, moves the model toward the cluster and reproduces its ranking of the signals. Adding the cluster's 30 s metrics lag (a Prometheus scrape plus a recording rule) brings the model's goodput within 3.2 points of the cluster for every HPA policy. On four ramps from 30 s to 10 minutes, a ten-minute ramp is slow enough in the model (99.2% in time at about half the static pool's cost), but with the cluster's queue per pod and lag no ramp is; all four ramps then ran on the cluster, where no ramp is slow enough (89.8% in time at ten minutes, and the gain stops at 300 s) and the lagged model is within 5.6 points on every seed; slot utilization beats requests in the system there at ten minutes on every seed, which a fixed lag misses, and a fourth model that gives each pod's Prometheus sample its own age places that flip where the cluster does on every seed, while requests in the system still fit the fixed lag better, which is stated as open. The seven datasets are re-run with a queue per pod too, and the findings that depend on the shared queue are named.
-
-Explore the [results](https://github.com/sunilmehta-si/k8s-inference-autoscaling-benchmark/tree/main/results), [methodology](https://github.com/sunilmehta-si/k8s-inference-autoscaling-benchmark/blob/main/docs/methodology.md), [the cluster comparison](https://github.com/sunilmehta-si/k8s-inference-autoscaling-benchmark/tree/main/results/cluster) and [the release](https://github.com/sunilmehta-si/k8s-inference-autoscaling-benchmark/releases/tag/v0.6.0).
-
-**[Agentic Code Review Tool](https://github.com/sunilmehta-si/agentic-code-review-tool)** — Scanner-grounded AI review for the whole pull request: 128 rules across app code, Kubernetes, Docker and Compose, Terraform, GitHub Actions, lock files and AI/agent code (OWASP LLM Top 10, MCP configs, agent skills and plugins, coding-agent settings), swept over Argo CD, Kubeflow Pipelines, KServe, MLflow and flytekit before each release so the false positives are fixed first (4,654 findings to 2,315 in one cycle, every one removed a test input, a fixture or the name of a secret, then 1,984 to 1,942 over KubeRay, Kueue, Kubeflow Trainer, Volcano, KAI Scheduler, llm-d and production-stack, removing CRD schemas read as pod specs and code its authors had already marked `//nolint:gosec`), with Go now covered by the weak-hash, deprecated-TLS, JWT, CORS and cookie rules too, including the credential-stealing workflow shape of this year's GhostAction attacks, checkout tokens shipped inside workflow artifacts, RBAC escalation paths short of `*`, model archives extracted without a path filter, HTTP calls that wait forever, Go reviewed as fully as Python (SQL built with `fmt.Sprintf`, `sh -c` handed a built command, servers with no header timeout), Dependabot configurations that propose a release the day it is published, and lock files that still trust the compromised emSign root, only on changed lines, with an optional Claude or local-LLM agent that verifies findings using read-only, repository-confined tools. Reports to GitHub, GitLab, SARIF and JUnit.
-
-See a [live AI review on a pull request](https://github.com/sunilmehta-si/agentic-code-review-tool/pull/1), the [rule catalogue](https://github.com/sunilmehta-si/agentic-code-review-tool#built-in-rules), and the [threat model](https://github.com/sunilmehta-si/agentic-code-review-tool/blob/main/SECURITY.md).
-
-**[AI DevSecOps CI/CD](https://github.com/sunilmehta-si/ai-devsecops-cicd)** — A reference pipeline for shipping LLM and AI-agent services safely: prompt-injection tests mapped to the OWASP LLM Top 10, SBOM and AI-BOM generation, Trivy and secret scanning, keyless cosign signing with attestations, and Kyverno admission policies with an offline validator mirroring them in CI.
-
-Explore the [threat model](https://github.com/sunilmehta-si/ai-devsecops-cicd/blob/main/docs/threat-model.md), [AI security test corpus](https://github.com/sunilmehta-si/ai-devsecops-cicd/tree/main/tests/ai_security), and [workflows](https://github.com/sunilmehta-si/ai-devsecops-cicd/tree/main/.github/workflows).
-
-**[Jev Inference Router](https://github.com/sunilmehta-si/jev-inference-router)** — An observable decision layer for local GPU inference: TypeSafe Jev chooses the handler, Python applies the policy, and local Qwen generates the answer, with visible probabilities, retrieval, Prometheus metrics, and reproducible evaluations against rule-based and classifier baselines.
-
-Explore the [architecture](https://github.com/sunilmehta-si/jev-inference-router/blob/main/docs/architecture.md), [evaluations](https://github.com/sunilmehta-si/jev-inference-router/tree/main/evaluations), and [operations guide](https://github.com/sunilmehta-si/jev-inference-router/blob/main/docs/operations.md).
-
-**[LLM Inference Platform](https://github.com/sunilmehta-si/llm-inference-platform)** — GPU-backed LLM serving on Apple Silicon with vLLM-Metal, a Python streaming gateway, Prometheus/Grafana monitoring, reproducible benchmarks, and Kubernetes deployment templates.
-
-Explore the [architecture](https://github.com/sunilmehta-si/llm-inference-platform/blob/main/docs/architecture.md), [operational tests](https://github.com/sunilmehta-si/llm-inference-platform/tree/main/tests), and [benchmark evidence](https://github.com/sunilmehta-si/llm-inference-platform/tree/main/benchmarks).
-
-### Upstream contributions
+## Upstream
 
 | Project | Contribution | Status |
 | :--- | :--- | :--- |
-| [Argo CD](https://github.com/argoproj/argo-cd/pull/30374) | Documented OCI repositories over plain HTTP (`insecureOCIForceHttp`, `type: oci` secrets) | Merged |
+| [Argo CD](https://github.com/argoproj/argo-cd/pull/30374) | Documented OCI repositories over plain HTTP (`insecureOCIForceHttp`, `type: oci` secrets) | **Merged** |
+| [MLflow](https://github.com/mlflow/mlflow/pull/27173) | Model downloads no longer modify signed model directories, which broke signature verification. [Reported](https://github.com/mlflow/mlflow/issues/27051), then fixed. | **Merged** |
+| [NVIDIA KAI Scheduler](https://github.com/NVIDIA/KAI-Scheduler/pull/2498) | Corrected the GPU fractioning docs to the names the subchart and operator use | **Merged** |
 | [KServe](https://github.com/kserve/kserve/pull/6472) | Security: every Python lock moved off the certifi that still trusted the compromised emSign roots | In review |
-| [xAI Python SDK](https://github.com/xai-org/xai-sdk-python/pull/241) | Shipped the missing `py.typed` marker so type checkers use the SDK's annotations | In review |
-| [Tesla vehicle-command](https://github.com/teslamotors/vehicle-command/pull/529) | Fixed key storage rejecting valid P-256 keys whose scalar starts with a zero byte, revised in review to Go 1.25's key encoding, which avoids a timing side channel | In review |
-| [X API CLI (xurl)](https://github.com/xdevplatform/xurl/pull/108) | Webhook server fails fast without an ngrok token instead of hanging | In review |
-| [MLflow](https://github.com/mlflow/mlflow/pull/27173) | Stopped writing a metadata file into every downloaded `models:/` artifact, which broke signature checks; the approach agreed with the maintainers in [#27051](https://github.com/mlflow/mlflow/issues/27051), as a breaking change | Merged |
-| [KAI Scheduler](https://github.com/kai-scheduler/KAI-Scheduler/pull/2498) | Docs: the gpu-fractioning names for the subchart and operator | Merged |
-| [etcd-operator](https://github.com/etcd-io/etcd-operator/pull/544) | The operator no longer carries on without its TLS certificates when provisioning fails; the error now requeues the reconcile | In review |
-| [KServe website](https://github.com/kserve/website/pull/766) | Docs: create the `kserve` namespace before applying `kserve.yaml` | In review |
-| [Kubeflow Pipelines](https://github.com/kubeflow/pipelines/issues/15056) | A compiler bug with a fix ready | Reported |
+| [Tesla vehicle-command](https://github.com/teslamotors/vehicle-command/pull/529) | Fixed key storage rejecting valid P-256 keys whose scalar starts with a zero byte, about one key in 256 | In review |
+| [xAI Python SDK](https://github.com/xai-org/xai-sdk-python/pull/241) | Shipped the missing `py.typed` marker, so type checkers use the SDK's annotations | In review |
+| [X API CLI (xurl)](https://github.com/xdevplatform/xurl/pull/108) | The webhook server fails fast without an ngrok token instead of hanging | In review |
+| [etcd-operator](https://github.com/etcd-io/etcd-operator/pull/544) | The operator no longer carries on without its TLS certificates when provisioning fails | In review |
+| [KServe website](https://github.com/kserve/website/pull/766) | Install docs: create the `kserve` namespace before applying the manifest | In review |
+| [Kubeflow Pipelines](https://github.com/kubeflow/pipelines/issues/15056) | A compiler bug: a multi-line default value makes the compiled pipeline YAML invalid. Fix ready. | Reported |
 
-### Tools I work with
+## Tools
 
 **Infrastructure** &nbsp; Kubernetes · Terraform · Argo CD · Helm · GCP · AWS · DigitalOcean · Cloudflare<br/>
 **MLOps & serving** &nbsp; Kubeflow Pipelines · MLflow · KServe · vLLM<br/>
-**Systems & services** &nbsp; Go · Rust · TypeScript · Python · PostgreSQL · Redis<br/>
 **GPU scheduling** &nbsp; Kueue · Volcano · KAI Scheduler · kwok<br/>
 **Security** &nbsp; Intel TDX · OAuth 2.1 / OIDC · Kyverno · OPA · cosign · SLSA · OpenSSF model signing<br/>
-**Observability** &nbsp; Prometheus · Grafana · Loki · Tempo · OpenTelemetry · ClickHouse
-
-### How I work
-
-- **Make changes reviewable.** Reproducible plans, GitOps reconciliation, and keyless delivery.
-- **Make failures understandable.** Useful telemetry, explicit failure modes, and written runbooks.
-- **Make correctness repeatable.** Regression tests for security fixes, billing paths, and migrations.
-- **Own the whole path.** Design, delivery, operations, and the details between them.
+**Observability** &nbsp; Prometheus · Grafana · Loki · Tempo · OpenTelemetry · ClickHouse<br/>
+**Languages & data** &nbsp; Go · Rust · TypeScript · Python · PostgreSQL · Redis
 
 ---
 
-**Building AI platforms, developer tools, or secure infrastructure?**<br/>
-[sunilmehta.si](https://sunilmehta.si) · [Connect on LinkedIn](https://www.linkedin.com/in/sunilmehta-si/) · [Connect on X](https://x.com/sunilmehta_si) · [Email me](mailto:sunilmehta695@gmail.com)
+**Building AI platforms, developer tools or secure infrastructure?**<br/>
+[sunilmehta.si](https://sunilmehta.si/#contact) · [LinkedIn](https://www.linkedin.com/in/sunilmehta-si/) · [X](https://x.com/sunilmehta_si) · [Email](mailto:sunilmehta695@gmail.com)

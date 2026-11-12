@@ -20,7 +20,7 @@
 
 I'm **Sunil Mehta**, Founding Lead DevOps & MLOps Engineer at **[ORGN](https://orgn.com)**, based in Gurugram and open to remote roles. For 9+ years I have built and run the platforms AI products depend on, from multi-cloud Kubernetes and confidential GPU compute to secure delivery and cost governance.
 
-In the open I build benchmarks that answer questions a platform team has to answer, and I send the fixes I find upstream.
+In the open I build benchmarks and tools that answer questions a platform team has to answer, and I send the fixes I find upstream.
 
 ## Measured in the open
 
@@ -29,6 +29,7 @@ In the open I build benchmarks that answer questions a platform team has to answ
 | **[k8s-gpu-scheduler-benchmark](https://github.com/sunilmehta-si/k8s-gpu-scheduler-benchmark)**<br/>`v0.5.0` | Which Kubernetes GPU scheduler should a platform run? | Out of the box only KAI bin-packs GPU pods by their GPUs. One setting made Volcano **26% faster and 26% cheaper** per useful GPU-hour on the same trace. |
 | **[k8s-inference-routing-benchmark](https://github.com/sunilmehta-si/k8s-inference-routing-benchmark)**<br/>`v0.6.0` | How much does the router in front of LLM servers matter? | Prefix-aware routing lifts cache hits from **64% to 80%** and cuts median time to first token by 27%. Under load the router matters more and the routers differ less. |
 | **[k8s-inference-autoscaling-benchmark](https://github.com/sunilmehta-si/k8s-inference-autoscaling-benchmark)**<br/>`v0.8.0` | What should an autoscaler follow when it scales LLM inference? | On a real cluster **no ramp from 30 seconds to 10 minutes** was slow enough for the default HPA to keep requests on time. Pod startup is the constraint, a small warm pool is the cheapest fix, and a forecast helps on slow ramps only. |
+| **[k8s-gpu-cost-scanner](https://github.com/sunilmehta-si/k8s-gpu-cost-scanner)**<br/>`v0.1.0` | Which GPUs is the cluster paying for and not using? | A read-only Go tool on the metrics a cluster already has. On a synthetic fleet backfilled into a real Prometheus in CI it finds every planted problem: **221.4 wasted GPU-hours** in a day, each counted once, and the cost per million tokens of each model. |
 | **[kubernetes-secure-mlops-pipeline](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline)**<br/>`v0.8.0` | Can every model in production be reproducible, signed and verified? | A real kind cluster runs **24 checks** on every push, and the gate blocked a 0.909 challenger against the 0.938 champion. |
 | **[agentic-code-review-tool](https://github.com/sunilmehta-si/agentic-code-review-tool)**<br/>`v0.11.1` | Scanner-grounded AI review for the whole pull request. | 128 rules, each swept over real repositories before release. One rule went from **1,556 findings to 101**. |
 
@@ -45,11 +46,11 @@ Also: **[ai-devsecops-cicd](https://github.com/sunilmehta-si/ai-devsecops-cicd)*
 
 | When | What | |
 | :--- | :--- | :--- |
+| 12 Nov 2026 | **k8s-gpu-cost-scanner** `v0.1.0` | [A new tool](https://github.com/sunilmehta-si/k8s-gpu-cost-scanner/releases/tag/v0.1.0): the GPUs an inference cluster pays for and does not use, and what each model costs per million tokens. |
 | 11 Nov 2026 | **k8s-inference-autoscaling-benchmark** `v0.8.0` | [A predictive policy](https://github.com/sunilmehta-si/k8s-inference-autoscaling-benchmark/releases/tag/v0.8.0): scaling one pod startup ahead helps on slow ramps, and warm capacity still wins the fast ones. |
 | 09 Nov 2026 | **kubernetes-secure-mlops-pipeline** `v0.8.0` | [Every pin is held back](https://github.com/sunilmehta-si/kubernetes-secure-mlops-pipeline/releases/tag/v0.8.0) until its release is 14 days old, and reported when it drifts. |
 | 04 Nov 2026 | **agentic-code-review-tool** `v0.11.1` | [A false positive](https://github.com/sunilmehta-si/agentic-code-review-tool/releases/tag/v0.11.1) found by sweeping Inspect AI: 1,124 findings from one rule, down to 8. |
 | 02 Nov 2026 | **k8s-inference-routing-benchmark** `v0.6.0` | [120 cluster runs under load](https://github.com/sunilmehta-si/k8s-inference-routing-benchmark/releases/tag/v0.6.0): the busier the pods, the more the router matters and the less the routers differ. |
-| 28 Oct 2026 | **MLflow**, merged upstream | [Model downloads no longer modify signed model directories](https://github.com/mlflow/mlflow/pull/27173), so signature verification holds. |
 
 ## The platform I run at ORGN
 

@@ -71,6 +71,7 @@ Also: **[ai-devsecops-cicd](https://github.com/sunilmehta-si/ai-devsecops-cicd)*
 | [Argo CD](https://github.com/argoproj/argo-cd/pull/30374) | Documented OCI repositories over plain HTTP (`insecureOCIForceHttp`, `type: oci` secrets) | **Merged** |
 | [MLflow](https://github.com/mlflow/mlflow/pull/27173) | Model downloads no longer modify signed model directories, which broke signature verification. [Reported](https://github.com/mlflow/mlflow/issues/27051), then fixed. | **Merged** |
 | [NVIDIA KAI Scheduler](https://github.com/NVIDIA/KAI-Scheduler/pull/2498) | Corrected the GPU fractioning docs to the names the subchart and operator use | **Merged** |
+| [llm-d inference simulator](https://github.com/llm-d/llm-d-inference-sim/pull/910) | Render requests no longer fail with `EOF` when vLLM closes an idle connection. [Reported](https://github.com/llm-d/llm-d-inference-sim/issues/909), then fixed. | **Merged** |
 | [KServe](https://github.com/kserve/kserve/pull/6472) | Security: every Python lock moved off the certifi that still trusted the compromised emSign roots | In review |
 | [Tesla vehicle-command](https://github.com/teslamotors/vehicle-command/pull/529) | Fixed key storage rejecting valid P-256 keys whose scalar starts with a zero byte, about one key in 256 | In review |
 | [xAI Python SDK](https://github.com/xai-org/xai-sdk-python/pull/241) | Shipped the missing `py.typed` marker, so type checkers use the SDK's annotations | In review |
